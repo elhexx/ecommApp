@@ -1,0 +1,95 @@
+{% extends "layout.html" %} {% block body %}
+<style>
+	body {
+		padding-top: 4rem;
+	}
+</style>
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Shopping Cart - Admin Add Product</h1>
+		</div>
+	</div>
+
+</div>-->
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-6">
+			<h1>Add Product</h1>
+			<h1>{{msg}}</h1>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+
+		<div class="col-md-6">
+			<form role="form" action="/addProduct" method="POST" enctype=multipart/form-data>
+
+				<select class="form-control" id="productSelect" name="category">
+				  <option>Please Select a Product Group</option>
+			      <option>Bar Soaps</option>
+			      <option>Lotions</option>
+			      <option>Creams</option>
+			    </select>
+
+				<div class="form-group">
+					<label for="productname" class="loginFormElement">Product Name:</label>
+					<input class="form-control" id="productname" type="text" name="pname">
+				</div>
+
+				<div class="form-group">
+					<label for="productprice" class="loginFormElement">Product Price</label>
+					<input class="form-control" id="productprice" type="number" name="price">
+				</div>
+
+
+				<div class="form-group">
+
+					<label class="control-label">Product Image</label>
+
+					<input class="filestyle" data-icon="false" type="file" name="file">
+
+				</div>
+
+				<div class="form-group">
+					<label class="loginformelement" for="productdescription">Product Description</label>
+					<input id="productdescription" class="form-control input-lg" placeholder="Large" type="text">
+					<div class="container">
+					</div>
+
+					<button type="submit" id="loginSubmit" class="btn btn-success loginFormElement">Add Product</button>
+
+				</div>
+			</form>
+
+		</div>
+
+
+
+
+
+
+
+
+
+	</div>
+
+	<!-- /.container -->
+
+	<footer>
+		<hr>
+		<div class=" container text-right align-bottom">
+			<p>Shopping Cart | © Copyright 2016, All Rights Reserved</p>
+		</div>
+	</footer>
+</div>
+
+
+<div id="push"></div>
+
+{% endblock %}
